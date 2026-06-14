@@ -27,6 +27,23 @@ Simple seat booking app written in Go with a Redis-backed hold flow and a static
 
 Copy [.env.example](.env.example) to `.env` if you want to keep local settings in one place.
 
+### Using a free hosted Redis (Upstash)
+
+You can use Upstash's free Redis plan for development. Steps:
+
+1. Create a free account at https://upstash.com and create a Redis database.
+2. Copy the REST/Redis endpoint (host:port) and the password.
+3. In Render (or your host) set environment variables:
+
+```text
+REDIS_ADDR=<host:port>
+REDIS_PASSWORD=<your-password>
+```
+
+4. The app reads `REDIS_ADDR` and `REDIS_PASSWORD` automatically when starting.
+
+Upstash offers a small free tier suitable for development and light testing.
+
 ## Run Locally
 
 ### With Docker
