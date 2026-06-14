@@ -40,7 +40,8 @@ REDIS_ADDR=<host:port>
 REDIS_PASSWORD=<your-password>
 ```
 
-4. The app reads `REDIS_ADDR` and `REDIS_PASSWORD` automatically when starting.
+4. Paste only the Redis host or URI into the variable value. Do not paste the full `redis-cli --tls -u ...` command.
+5. The app reads `REDIS_ADDR` and `REDIS_PASSWORD` automatically when starting, and also accepts `REDIS_URL` if you prefer a single connection string.
 
 Upstash offers a small free tier suitable for development and light testing.
 
